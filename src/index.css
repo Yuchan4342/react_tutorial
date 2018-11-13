@@ -1,5 +1,6 @@
 body {
-  font: 14px "Century Gothic", Futura, sans-serif;
+  background: #f0f0f0;
+  font: 18px Arial, sans-serif;
   margin: 20px;
 }
 
@@ -21,15 +22,15 @@ ol, ul {
   background: #fff;
   border: 1px solid #999;
   float: left;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
+  height: 48px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 48px;
 }
 
 .square:focus {
@@ -49,3 +50,56 @@ ol, ul {
   margin-left: 20px;
 }
 
+.game-status {
+  font-size: 24px;
+}
+
+.winner {
+  color: red;
+}
+
+.diff-location {
+  display: inline-block;
+}
+
+li {
+  height: 36px;
+  clear: both;
+}
+
+.diff-location {
+  margin-left: 10px;
+}
+
+.history, .select-lang {
+  text-align: center;
+  float: left;
+  font-size: 14px;
+  background: #fff;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.history {
+  width: 140px;
+  height: 24px;
+  line-height: 24px;
+  margin: 2px, 4px;
+}
+
+.select-lang {
+  width: 60px;
+  height: 32px;
+  line-height: 32px;
+  margin: 6px 0;
+}
+
+.select-lang + .select-lang {
+  margin-left: 6px;
+}
+
+.select-lang-box {
+  font-size: 20px;
+  margin-top: 20px;
+}

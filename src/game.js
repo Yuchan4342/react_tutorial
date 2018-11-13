@@ -107,15 +107,15 @@ class Game extends React.Component {
 
       return (
         <li key={ move }>
-          <button onClick={() => this.jumpTo(move)}>{ desc }</button>
-          <span> { diffLocation }</span>
+          <div className="history" onClick={() => this.jumpTo(move)}>{ desc }</div>
+          <div className="diff-location">{ diffLocation }</div>
         </li>
       );
     });
 
     let status;
     if (winner) {
-      status = this.props.t('winner') + winner;
+      status = <b className="winner">{ this.props.t('winner', { winner: winner }) }</b>;
     } else {
       status = this.props.t('next_player') + (this.state.xIsNext ? 'X' : 'O');
     }
@@ -127,11 +127,14 @@ class Game extends React.Component {
             squares={ current.squares }
             onClick={(i) => this.handleClick(i)}
           />
+          <div className="select-lang-box">
+            <div>{ this.props.t('language') }</div>
+            <div className="select-lang" onClick={() => this.changeLanguage('en')}>English</div>
+            <div className="select-lang" onClick={() => this.changeLanguage('ja')}>日本語</div>
+          </div>
         </div>
         <div className="game-info">
-          <div>{ status }</div>
-          <button onClick={() => this.changeLanguage('en')}>English</button>
-          <button onClick={() => this.changeLanguage('ja')}>日本語</button>
+          <div className="game-status">{ status }</div>
           <ol>{ moves }</ol>
         </div>
       </div>
