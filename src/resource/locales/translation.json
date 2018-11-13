@@ -1,0 +1,16 @@
+{
+    "en": {
+        "translation": {
+            "go_to_move": "Go to move #{{number}}",
+            "go_to_game_start": "Go to game start",
+            "next_player": "Next Player: "
+        }
+    },
+    "ja": {
+        "translation": {
+            "go_to_move": "{{number}}番目に移動",
+            "go_to_game_start": "はじめに戻る",
+            "next_player": "次のプレイヤーは, "
+        }
+    }   
+}
