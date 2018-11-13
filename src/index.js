@@ -95,9 +95,12 @@ class Game extends React.Component {
     const winner = calculateWinner(current.squares);
 
     const moves = history.map((step, move) => {
-      const desc = move ?
+      let desc = move ?
         'Go to move #' + move :
         'Go to game start';
+      if (move === this.state.stepNumber) {
+        desc = <b>{ desc }</b>;
+      }
       const diffLocation = getDiffLocation(move, history);
 
       return (
