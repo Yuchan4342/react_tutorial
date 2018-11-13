@@ -3,14 +3,16 @@
         "translation": {
             "go_to_move": "Go to move #{{number}}",
             "go_to_game_start": "Go to game start",
-            "next_player": "Next Player: "
+            "next_player": "Next Player: ",
+            "winner": "Winner: "
         }
     },
     "ja": {
         "translation": {
-            "go_to_move": "{{number}}番目に移動",
+            "go_to_move": "{{number}}手目に戻る",
             "go_to_game_start": "はじめに戻る",
-            "next_player": "次のプレイヤーは, "
+            "next_player": "次のプレイヤーは, ",
+            "winner": "勝者: "
         }
     }   
 }

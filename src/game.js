@@ -86,6 +86,12 @@ class Game extends React.Component {
     });
   }
 
+  changeLanguage(locale) {
+    i18next.changeLanguage(locale, (err) => {
+      if (err) return console.log('something went wrong loading', err);
+    });
+  }
+
   render() {
     const history = this.state.history;
     const current = history[this.state.stepNumber];
@@ -109,7 +115,7 @@ class Game extends React.Component {
 
     let status;
     if (winner) {
-      status = 'Winner: ' + winner;
+      status = this.props.t('winner') + winner;
     } else {
       status = this.props.t('next_player') + (this.state.xIsNext ? 'X' : 'O');
     }
@@ -124,6 +130,8 @@ class Game extends React.Component {
         </div>
         <div className="game-info">
           <div>{ status }</div>
+          <button onClick={() => this.changeLanguage('en')}>English</button>
+          <button onClick={() => this.changeLanguage('ja')}>日本語</button>
           <ol>{ moves }</ol>
         </div>
       </div>
