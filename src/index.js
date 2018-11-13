@@ -36,7 +36,7 @@ class Board extends React.Component {
     for (let i = 0; i < rowN; i++) {
       let columns = [];
       for (let j = 0; j < colN; j++) {
-        columns.push(this.renderSquare(j + i * colN))
+        columns.push(this.renderSquare(j + i * colN));
       }
       rows.push(<div className="board-row">{ columns }</div>);
     }
@@ -91,12 +91,11 @@ class Game extends React.Component {
     const winner = calculateWinner(current.squares);
 
     const moves = history.map((step, move) => {
-      let desc = move ?
+      const descStr = move ?
         'Go to move #' + move :
         'Go to game start';
-      if (move === this.state.stepNumber) {
-        desc = <b>{ desc }</b>;
-      }
+      const desc = (move === this.state.stepNumber) ?
+        <b>{ descStr }</b> : descStr;
       const diffLocation = getDiffLocation(move, history);
 
       return (
