@@ -4,22 +4,17 @@ import './index.css';
 
 // Square: controlled components by Board.
 // Board has full control over Squares.
-class Square extends React.Component {
-  render() {
-    return (
-      // onClick prop: button に event listener をセット.
-      // button をクリックすると onClick event が呼ばれる.
-      // この event は this.props.onClick() を呼び,
-      // Board で onClick として指定された prop,
-      // すなわち this.handleClick(i) が呼び出される.
-      <button
-        className="square"
-        onClick={() => this.props.onClick()}
-      >
-        { this.props.value }
-      </button>
-    );
-  }
+function Square(props) {
+  return (
+    // onClick prop: button に event listener をセット.
+    // button をクリックすると onClick event が呼ばれる.
+    // この event は props.onClick() を呼び,
+    // Board で onClick として指定された prop,
+    // すなわち handleClick(i) が呼び出される.
+    <button className="square" onClick={props.onClick}>
+      { props.value }
+    </button>
+  );
 }
 
 class Board extends React.Component {
