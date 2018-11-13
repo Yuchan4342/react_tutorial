@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { SIGHUP } from 'constants';
 
 // Square: controlled components by Board.
 // Board has full control over Squares.
@@ -99,9 +98,12 @@ class Game extends React.Component {
       const desc = move ?
         'Go to move #' + move :
         'Go to game start';
+      const diffLocation = getDiffLocation(move, history);
+
       return (
         <li key={ move }>
           <button onClick={() => this.jumpTo(move)}>{ desc }</button>
+          <span> { diffLocation }</span>
         </li>
       );
     });
@@ -155,4 +157,24 @@ function calculateWinner(squares) {
     }
   }
   return null;
+}
+
+// 前 step から変化した位置を文字列で示す.
+// return the string of the location for move in step in the format (col, row).
+function getDiffLocation(step, history) {
+  let diff = -1;
+  if (step) {
+    const prev = history[step - 1].squares;
+    const current = history[step].squares;
+    for (let i = 0; i < prev.length; i++) {
+      if (prev[i] !== current[i]) {
+        diff = i;
+        break;
+      }
+    }
+  }
+  let ret = (diff !== -1) ?
+    '(' + (diff % 3) + ', ' + Math.floor(diff / 3) + ')' :
+    '';
+  return ret;
 }
