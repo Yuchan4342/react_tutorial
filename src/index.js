@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Game from './game';
-import i18n from './i18n';
-import { I18nextProvider } from 'react-i18next';
+import './index.css';
+import './i18n';
 
 ReactDOM.render(
-  <I18nextProvider i18n={ i18n }>
-    <Game />
-  </I18nextProvider>,
+  <Game />,
   document.getElementById('root')
 );

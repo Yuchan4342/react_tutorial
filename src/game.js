@@ -1,7 +1,6 @@
-import React from 'react';
-import './index.css';
+import React, { Component, Suspense } from 'react';
 import i18next from 'i18next';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 // Square: controlled components by Board.
 // Board has full control over Squares.
@@ -20,7 +19,7 @@ function Square(props) {
   );
 }
 
-class Board extends React.Component {
+class Board extends Component {
   renderSquare(i) {
     return (
       <Square
@@ -49,7 +48,7 @@ class Board extends React.Component {
   }
 }
 
-class Game extends React.Component {
+class LegacyGameClass extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -96,11 +95,12 @@ class Game extends React.Component {
     const history = this.state.history;
     const current = history[this.state.stepNumber];
     const winner = calculateWinner(current.squares);
+    const { t } = this.props;
 
     const moves = history.map((step, move) => {
       const descStr = move ?
-        this.props.t('go_to_move', { number: move }):
-        this.props.t('go_to_game_start');
+        t('go_to_move', { number: move }):
+        t('go_to_game_start');
       const desc = (move === this.state.stepNumber) ?
         <b>{ descStr }</b> : descStr;
       const diffLocation = getDiffLocation(move, history);
@@ -115,9 +115,9 @@ class Game extends React.Component {
 
     let status;
     if (winner) {
-      status = <b className="winner">{ this.props.t('winner', { winner: winner }) }</b>;
+      status = <b className="winner">{ t('winner', { winner: winner }) }</b>;
     } else {
-      status = this.props.t('next_player') + (this.state.xIsNext ? 'X' : 'O');
+      status = t('next_player') + (this.state.xIsNext ? 'X' : 'O');
     }
 
     return (
@@ -128,7 +128,7 @@ class Game extends React.Component {
             onClick={(i) => this.handleClick(i)}
           />
           <div className="select-lang-box">
-            <div>{ this.props.t('language') }</div>
+            <div>{ t('language') }</div>
             <div className="select-lang" onClick={() => this.changeLanguage('en')}>English</div>
             <div className="select-lang" onClick={() => this.changeLanguage('ja')}>日本語</div>
           </div>
@@ -142,7 +142,17 @@ class Game extends React.Component {
   }
 }
 
-export default translate()(Game);
+const MyGame = withTranslation()(LegacyGameClass);
+
+// i18n translations might still be loaded by the http backend
+// use react's Suspense
+export default function Game() {
+  return (
+    <Suspense fallback="loading">
+      <MyGame />
+    </Suspense>
+  );
+}
 
 function calculateWinner(squares) {
   const lines = [
