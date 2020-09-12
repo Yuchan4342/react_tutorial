@@ -4,6 +4,7 @@
             "go_to_move": "Go to move #{{number}}",
             "go_to_game_start": "Go to game start",
             "next_player": "Next Player: ",
+            "tic_tac_toe": "Tic-Tac-Toe",
             "winner": "Winner: {{winner}}!",
             "language": "Language"
         }
@@ -13,6 +14,7 @@
             "go_to_move": "{{number}}手目に戻る",
             "go_to_game_start": "はじめに戻る",
             "next_player": "次のプレイヤーは ",
+            "tic_tac_toe": "三目並べ",
             "winner": "{{winner}}の勝ち！",
             "language": "言語"
         }
