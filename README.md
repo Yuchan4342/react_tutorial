@@ -84,6 +84,6 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-もっと詳しく知りたい場合は [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started). をご覧ください。
+もっと詳しく知りたい場合は [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started) をご覧ください。
 
 React を学びたい場合は [React documentation](https://reactjs.org/) をチェックしてください。
