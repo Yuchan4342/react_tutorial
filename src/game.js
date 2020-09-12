@@ -122,7 +122,7 @@ class LegacyGameClass extends Component {
 
     return (
       <div>
-        <h1>{ t('tic_tac_toe') }</h1>
+        <h1 className="title">{ t('tic_tac_toe') }</h1>
         <div className="game">
           <div className="game-board">
             <Board
