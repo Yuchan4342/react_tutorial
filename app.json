@@ -1,0 +1,12 @@
+{
+    "name": "char-react-tutorial",
+    "description": "Tic-Tac-Toe game",
+    "keywords": [
+        "tic-tac-toe"
+    ],
+    "buildpacks": [
+        {
+            "url": "mars/create-react-app"
+        }
+    ]
+}
