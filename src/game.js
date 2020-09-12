@@ -121,21 +121,24 @@ class LegacyGameClass extends Component {
     }
 
     return (
-      <div className="game">
-        <div className="game-board">
-          <Board
-            squares={ current.squares }
-            onClick={(i) => this.handleClick(i)}
-          />
-          <div className="select-lang-box">
-            <div>{ t('language') }</div>
-            <div className="select-lang" onClick={() => this.changeLanguage('en')}>English</div>
-            <div className="select-lang" onClick={() => this.changeLanguage('ja')}>日本語</div>
+      <div>
+        <h1>Tic-Tac-Toe</h1>
+        <div className="game">
+          <div className="game-board">
+            <Board
+              squares={ current.squares }
+              onClick={(i) => this.handleClick(i)}
+            />
+            <div className="select-lang-box">
+              <div>{ t('language') }</div>
+              <div className="select-lang" onClick={() => this.changeLanguage('en')}>English</div>
+              <div className="select-lang" onClick={() => this.changeLanguage('ja')}>日本語</div>
+            </div>
           </div>
-        </div>
-        <div className="game-info">
-          <div className="game-status">{ status }</div>
-          <ol>{ moves }</ol>
+          <div className="game-info">
+            <div className="game-status">{ status }</div>
+            <ol>{ moves }</ol>
+          </div>
         </div>
       </div>
     );
