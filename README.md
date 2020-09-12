@@ -10,11 +10,13 @@ In the project directory, you can run:
 
 プロジェクトディレクトリ上で、以下のコマンドを実行できます:
 
-### `yarn install`
+### `yarn` / `yarn install`
 
 package.json から依存パッケージをインストールします。<br>
 yarn.lock と node_modules ディレクトリの内容を元にインストールするパッケージとバージョンが決まります。<br>
 npm における `npm install` に対応するコマンドです。
+
+**※ Do not run `npm install`!** not to generate package-lock.json.
 
 **※ `npm install` は実行しないでください！** (package-lock.json を生成しないため。)
 
@@ -24,7 +26,7 @@ package.json に従いパッケージの更新を行います。<br>
 実行によって yarn.lock が更新されます。<br>
 npm における `npm upgrade` に対応するコマンドです。
 
-### `npm start`
+### `yarn start` / `npm start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -38,7 +40,7 @@ development モードでアプリケーションを起動します。<br>
 ソースコードに編集を加えた場合は表示中のページがリロードされます。<br>
 lint エラーがある場合はコンソール上で見ることができます。
 
-### `npm test`
+### `yarn test` / `npm test`
 
 Launches the test runner in the interactive watch mode.<br>
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
@@ -46,7 +48,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 インタラクティブウォッチモードでテスト runner を起動します。<br>
 詳しくは [running tests](https://facebook.github.io/create-react-app/docs/running-tests) についての章をご覧ください。
 
-### `npm run build`
+### `yarn build` / `yarn run build` / `npm run build`
 
 Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
