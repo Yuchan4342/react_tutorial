@@ -10,7 +10,9 @@
     "react-scripts": "3.4.3"
   },
   "engines": {
-    "node": "10.17"
+    "node": "^10",
+    "npm": ">=6.11.3 <7",
+    "yarn": ">=1.19.1 <2"
   },
   "scripts": {
     "start": "react-scripts start",
