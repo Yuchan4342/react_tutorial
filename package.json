@@ -1,6 +1,13 @@
 {
-  "name": "tutorial",
-  "version": "0.1.0",
+  "name": "char-react-tutorial",
+  "version": "0.2.0",
+  "description": "Tic-Tac-Toe game",
+  "author": "Yuto Iwata <jyuchan415@gmail.com>",
+  "homepage": "https://www.o-char.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yuchan4342/react-tutorial.git"
+  },
   "private": true,
   "dependencies": {
     "i18next": "^19.7.0",
