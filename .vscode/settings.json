@@ -1,9 +1,19 @@
 {
-    "jshint.options": {
-        "esversion": 6
-    },
+    "jshint.enable": false,
+    // "jshint.options": {
+    //     "esversion": 6
+    // },
     // 既定の改行文字。LF の場合には \n を CRLF の場合には \r\n を使用してください。
     "files.eol": "\n",
     // ファイル末尾の改行必須.
     "files.insertFinalNewline": false,
+
+    // for vscode-eslint
+    "[javascript]": {
+        "editor.formatOnSave": false
+    },
+        "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.fixAll.markdownlint": true
+    }
 }
