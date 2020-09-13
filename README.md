@@ -24,46 +24,46 @@ npm における `npm install` に対応するコマンドです。
 
 ### `yarn upgrade`
 
-package.json に従いパッケージの更新を行います。<br>
-実行によって yarn.lock が更新されます。<br>
+package.json に従いパッケージの更新を行います。  
+実行によって yarn.lock が更新されます。  
 npm における `npm upgrade` に対応するコマンドです。
 
 ### `yarn start` / `npm start`
 
-Runs the app in the development mode.<br>
+Runs the app in the development mode.  
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
+The page will reload if you make edits.  
 You will also see any lint errors in the console.
 
-development モードでアプリケーションを起動します。<br>
+development モードでアプリケーションを起動します。  
 ブラウザで [http://localhost:3000](http://localhost:3000) を開いて表示します。
 
-ソースコードに編集を加えた場合は表示中のページがリロードされます。<br>
+ソースコードに編集を加えた場合は表示中のページがリロードされます。  
 lint エラーがある場合はコンソール上で見ることができます。
 
 ### `yarn test` / `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
+Launches the test runner in the interactive watch mode.  
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-インタラクティブウォッチモードでテスト runner を起動します。<br>
+インタラクティブウォッチモードでテスト runner を起動します。  
 詳しくは [running tests](https://facebook.github.io/create-react-app/docs/running-tests) についての章をご覧ください。
 
 ### `yarn build` / `yarn run build` / `npm run build`
 
-Builds the app for production to the `build` folder.<br>
+Builds the app for production to the `build` folder.  
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br>
+The build is minified and the filenames include the hashes.  
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-production 向けのアプリケーションをビルドして `build` フォルダに出力します。<br>
+production 向けのアプリケーションをビルドして `build` フォルダに出力します。  
 production モードで正確に React をバンドルし、最高のパフォーマンスを出せるようにビルドを最適化します。
 
-ビルドは縮小され、ファイル名にはハッシュが含まれます。<br>
+ビルドは縮小され、ファイル名にはハッシュが含まれます。  
 これによってアプリをデプロイする準備ができます！
 
 詳しくは [deployment](https://facebook.github.io/create-react-app/docs/deployment) についての章をご覧ください。
