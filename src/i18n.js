@@ -1,8 +1,10 @@
 import i18next from 'i18next';
 import resources from './resource/locales/translation.json';
+import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next } from 'react-i18next';
 
 const i18n = i18next
+  .use(LanguageDetector)
   // pass the i18n instance to react-i18next.
   .use(initReactI18next)
   // init i18next
