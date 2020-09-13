@@ -88,10 +88,7 @@ class LegacyGameClass extends Component {
 
   changeLanguage(locale) {
     i18next.changeLanguage(locale, (err) => {
-      if (err) {
-        return console.log('something went wrong loading', err);
-      }
-      localStorage.setItem('i18next', locale);
+      if (err) return console.log('something went wrong loading', err);
     });
   }
 
