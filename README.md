@@ -92,4 +92,7 @@ React を学びたい場合は [React documentation](https://reactjs.org/) を�
 
 ## Environmental variables / 環境変数設定
 
-`HOST`: canonical host name. canonical ホスト名。ここにホスト名を指定した場合、そのホストにリダイレクトする。
+* `HOST`: canonical host name.  
+canonical ホスト名。ここにホスト名を指定した場合、そのホストにリダイレクトします。  
+  * Please do not forget to set if you host this app on heroku.
+  * heroku でホストする場合は必ず設定してください。
