@@ -3,5 +3,6 @@
   "routes": {
     "/**": "index.html"
   },
+  "canonical_host": "${HOST}",
   "https_only": true
 }

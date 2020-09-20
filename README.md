@@ -89,3 +89,10 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 もっと詳しく知りたい場合は [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started) をご覧ください。
 
 React を学びたい場合は [React documentation](https://reactjs.org/) をチェックしてください。
+
+## Environmental variables / 環境変数設定
+
+* `HOST`: canonical host name.  
+canonical ホスト名。ここにホスト名を指定した場合、そのホストにリダイレクトします。  
+  * Please do not forget to set if you host this app on heroku.
+  * heroku でホストする場合は必ず設定してください。
